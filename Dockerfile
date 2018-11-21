@@ -67,6 +67,4 @@ RUN echo "Europe/Moscow" > /etc/timezone:ro \
 
 RUN apt-get install -y wget && apt-get install -y gzip
 
-RUN useradd -u 1000 -ms /bin/bash app
-USER app
-
+COPY after_exec.sh /usr/local/bin/
